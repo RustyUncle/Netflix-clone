@@ -7,12 +7,12 @@
 ![pic4](https://user-images.githubusercontent.com/46470297/225446261-3a09693b-2ef1-48b0-a9d0-0cc732340367.jpg)
 
 1- remove env.env file name make it like .env file and push your Postgres database url
-For example: DATABASE_URL=postgres://<h4>YOUR USERNAME:YOUR PASSWORD</h4>@localhost/rustflix_db
+For example: DATABASE_URL=postgres://YOUR USERNAME:YOUR PASSWORD@localhost/rustflix_db
 
-2- Import <h4>rustflix_db.sql</h4> to Postgres
+2- Import rustflix_db.sql to Postgres
 
 3- There are a few predefined preview movie and thumbnail names inside rustflix_db.sql
-so use them as adding movie files to "entities/previews/" - For example: "entities/previews/<h4>extraction.mp4</h4>"
+so use them as adding movie files to "entities/previews/" - For example: "entities/previews/extraction.mp4"
 
 Predifined movie list:
    *extraction.mp4
