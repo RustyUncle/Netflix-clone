@@ -28,19 +28,19 @@ so use them as adding movie files to entities/previews/ - For example: "entities
 <li>red_notice.mp4</li>
 <li>rememberme.mp4</li>
 <li>seven_years_intibet.mp4</li>
-<li>tenet.mp4</li><
+<li>tenet.mp4</li>
 <li>the_godfather2.mp4</li>
 <li>the_irishman.mp4</li>
 <li>the_king.mp4</li>
 <li>the_kissing_booth.mp4</li>
 <li>the_man_from_toronto.mp4</li>
-<li>the_old_guard.mp4</li><
+<li>the_old_guard.mp4</li>
 <li>he_shawshank_redeption.mp4</li>
 <li>the_strays.mp4</li>
 <li>the_takedown.mp4</li>
 <li>thegood_thebad.mp4</li>
 <li>thunder_force.mp4</li>
 <li>troy.mp4</li>
-<li>unlocked.mp4</li>
+<li>unlocked.mp4</li></br>
 
 OR add your own list
