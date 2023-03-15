@@ -15,10 +15,10 @@ For example: DATABASE_URL=postgres://YOUR USERNAME:YOUR PASSWORD@localhost/rustf
 so use them as adding movie files to entities/previews/ - For example: "entities/previews/extraction.mp4"</br>
 
 <h4>Predifined movie list:</h4></br> 
-<li>extraction.mp4</li></br>
-<li>6_underground.mp4</li></br>
-<li>against_the_ice.mp4</li></br>
-<li>bird_box.mp4</li></br>
+<li>extraction.mp4</li>
+<li>6_underground.mp4</li>
+<li>against_the_ice.mp4</li>
+<li>bird_box.mp4</li>
 <li>fantasy_island.mp4</li></br>
 <li>joker.mp4</li></br>
 <li>jumanji.mp4</li></br>
