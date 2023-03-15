@@ -1,19 +1,18 @@
 # Netflix-clone
-A Netflix clone made using Rust, Actix-web, and Postgres 
-![pic1](https://user-images.githubusercontent.com/46470297/225446107-7c35710f-d76a-4415-81c7-188265a9e150.PNG)
+<h2>A Netflix clone made using Rust, Actix-web, and Postgres </h2>
 
-<img src=”https://userimages.githubusercontent.com/75753187/123358567-aac7b900-d539-11eb-8275-0b380264bb4c.png" alt=”my banner”>
+![pic1](https://user-images.githubusercontent.com/46470297/225446107-7c35710f-d76a-4415-81c7-188265a9e150.PNG)
 ![pic2](https://user-images.githubusercontent.com/46470297/225446169-1a4b859c-3ec9-4704-9180-3740fe8346f8.jpg)
 ![pic3](https://user-images.githubusercontent.com/46470297/225446231-92722dc2-dfbc-4b38-872c-5ce00c33e9ef.jpg)
 ![pic4](https://user-images.githubusercontent.com/46470297/225446261-3a09693b-2ef1-48b0-a9d0-0cc732340367.jpg)
 
 1- remove env.env file name make it like .env file and push your Postgres database url
-For example: DATABASE_URL=postgres://YOUR USERNAME:YOUR PASSWORD@localhost/rustflix_db
+For example: DATABASE_URL=postgres://<h4>YOUR USERNAME:YOUR PASSWORD</h4>@localhost/rustflix_db
 
-2- Import rustflix_db.sql to Postgres
+2- Import <h4>rustflix_db.sql</h4> to Postgres
 
 3- There are a few predefined preview movie and thumbnail names inside rustflix_db.sql
-so use them as adding movie files to "entities/previews/" - For example: "entities/previews/extraction.mp4"
+so use them as adding movie files to "entities/previews/" - For example: "entities/previews/<h4>extraction.mp4</h4>"
 
 Predifined movie list:
    *extraction.mp4
