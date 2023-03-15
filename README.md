@@ -15,7 +15,7 @@ For example: DATABASE_URL=postgres://YOUR USERNAME:YOUR PASSWORD@localhost/rustf
 so use them as adding movie files to entities/previews/ - For example: "entities/previews/extraction.mp4"</br>
 
 <h4>Predifined movie list:</h4></br>
-<il>
+<li>
     extraction.mp4</br>
     6_underground.mp4</br>
     against_the_ice.mp4</br>
@@ -43,5 +43,5 @@ so use them as adding movie files to entities/previews/ - For example: "entities
     thunder_force.mp4</br>
     troy.mp4</br>
     unlocked.mp4</br>
-</il>    
+</li>    
 OR add your own list
