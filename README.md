@@ -6,41 +6,41 @@
 ![pic3](https://user-images.githubusercontent.com/46470297/225446231-92722dc2-dfbc-4b38-872c-5ce00c33e9ef.jpg)
 ![pic4](https://user-images.githubusercontent.com/46470297/225446261-3a09693b-2ef1-48b0-a9d0-0cc732340367.jpg)
 
-1- remove env.env file name make it like .env file and push your Postgres database url
-For example: DATABASE_URL=postgres://YOUR USERNAME:YOUR PASSWORD@localhost/rustflix_db
+1- remove env.env file name make it like .env file and push your Postgres database url</br>
+For example: DATABASE_URL=postgres://YOUR USERNAME:YOUR PASSWORD@localhost/rustflix_db</br>
 
-2- Import rustflix_db.sql to Postgres
+2- Import rustflix_db.sql to Postgres</br>
 
-3- There are a few predefined preview movie and thumbnail names inside rustflix_db.sql
-so use them as adding movie files to "entities/previews/" - For example: "entities/previews/extraction.mp4"
+3- There are a few predefined preview movie and thumbnail names inside rustflix_db.sql</br>
+so use them as adding movie files to "entities/previews/" - For example: "entities/previews/extraction.mp4"</br>
 
-Predifined movie list:
-   *extraction.mp4
-    6_underground.mp4
-    against_the_ice.mp4
-    bird_box.mp4
-    fantasy_island.mp4
-    joker.mp4
-    jumanji.mp4
-    murder_mystery.mp4
-    paper_lives.mp4
-    pulp_finction.mp4
-    red_notice.mp4
-    rememberme.mp4
-    seven_years_intibet.mp4
-    tenet.mp4
-    the_godfather2.mp4
-    the_irishman.mp4
-    the_king.mp4
-    the_kissing_booth.mp4
-    the_man_from_toronto.mp4
-    the_old_guard.mp4
-    he_shawshank_redeption.mp4
-    the_strays.mp4
-    the_takedown.mp4
-    thegood_thebad.mp4
-    thunder_force.mp4
-    troy.mp4
-    unlocked.mp4
-  *
+Predifined movie list:</br>
+   *extraction.mp4</br>
+    6_underground.mp4</br>
+    against_the_ice.mp4</br>
+    bird_box.mp4</br>
+    fantasy_island.mp4</br>
+    joker.mp4</br>
+    jumanji.mp4</br>
+    murder_mystery.mp4</br>
+    paper_lives.mp4</br>
+    pulp_finction.mp4</br>
+    red_notice.mp4</br>
+    rememberme.mp4</br>
+    seven_years_intibet.mp4</br>
+    tenet.mp4</br>
+    the_godfather2.mp4</br>
+    the_irishman.mp4</br>
+    the_king.mp4</br>
+    the_kissing_booth.mp4</br>
+    the_man_from_toronto.mp4</br>
+    the_old_guard.mp4</br>
+    he_shawshank_redeption.mp4</br>
+    the_strays.mp4</br>
+    the_takedown.mp4</br>
+    thegood_thebad.mp4</br>
+    thunder_force.mp4</br>
+    troy.mp4</br>
+    unlocked.mp4</br>
+  *</br>
 OR add your own list
