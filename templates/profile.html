@@ -1,0 +1,94 @@
+{% set navbar = true%}
+{% include "header.html" %}
+
+<div class="settingsContainer column">
+
+    <div class="formSection">
+        <form action="/profile" method="POST">
+
+            <h2>User details</h2>
+
+            {% if not users %}
+                <input type="text" name="fname" placeholder="First name">
+                {% if fname_lenght %}
+                <span>{{fname_lenght}}</span>
+                {% endif %}
+                {% if fname_special %}
+                <span>{{fname_special}}</span>
+                {% endif %}</br>
+                <input type="text" name="lname" placeholder="Last name">
+                {% if lname_lenght %}
+                <span>{{lname_lenght}}</span>
+                {% endif %}
+                {% if lname_special %}
+                <span>{{lname_special}}</span>
+                {% endif %}</br>
+                <input type="email" name="email" placeholder="Email">
+                {% if email_invalid %}
+                <span>{{email_invalid}}</span>
+                {% endif %}
+                {% if email_used %}
+                <span>{{email_used}}</span>
+                {% endif %}
+            {% endif %}
+            {% if users %}
+            {% for user in users %}
+            <input type="text" name="fname" placeholder="First name" value="{{user.fname}}">  
+            <input type="text" name="lname" placeholder="Last name" value="{{user.lname}}">
+            <input type="email" name="email" placeholder="Email" value="{{user.email}}">    
+            {% endfor %}
+            {% endif %}
+
+            <div class="message">
+                {% if detail %}
+                    <span style="color: #2ecc71;">{{detail}}</span>
+                {% endif %}
+            </div>
+            <input type="submit" value="Save">
+
+        </form>
+    </div>
+
+    <div class="formSection">
+
+        <form action="/pw_up" method="POST">
+
+            <h2>Update password</h2>
+            {% if empw_notmatch %}
+            <span>{{empw_notmatch}}</span>
+            {% endif %}</br>
+            <input type="password" name="oldpass" placeholder="Old password">
+            {% if pass_lenght %}
+            <span>{{pass_lenght}}</span>
+            {% endif %}</br>
+            <input type="password" name="newpass" placeholder="New password">
+            {% if pass_notmatch %}
+            <span>{{pass_notmatch}}</span>
+            {% endif %}</br>
+            <input type="password" name="newpass2" placeholder="Confirm new password">
+
+            <div class="message">
+                {% if updated %}
+                    <span style="color: #2ecc71;">{{updated}}</span>
+                {% endif %}
+            </div>
+
+            <input type="submit" value="Save">
+
+        </form>
+    </div>
+
+    <div class="formSection">
+        <h2>Subscription</h2>
+
+        <div class="message">
+            <!-- subscribtion detail message -->
+        </div>
+    </div>
+
+</div>
+</div>
+    
+
+
+

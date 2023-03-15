@@ -1,0 +1,46 @@
+{% set navbar = true%}
+{% include "header.html" %}
+                    
+<div class="textboxContainer">
+        <input type="text" class="searchInput" placeholder="Search for something">
+</div>
+<!-- <div class="result"></div> -->
+<div class='previewCategories noScroll'>
+    <div class='category'>
+        <div class='entities'>
+            {% if searches %}
+            {% for search in searches %}
+            <a href="/entity/{{search.id}}">
+                <div class="previewContainer small">
+                    <img src="/{{search.thumbnail}}" title="{{search.name}}">
+                </div>
+            </a>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<script>
+$(function() {
+    var username = "{{username}}";
+    var timer;
+
+    $(".searchInput").keyup(function() {
+        clearTimeout(timer);
+
+        timer = setTimeout(function() {
+            var val = $(".searchInput").val();
+            if(val != "") {
+                $.post("/ajax/search", { term: val, username: username }, function(data) {
+                    $(".wrapper").html(data);
+                })
+            }
+            else {
+                $(".wrapper").html("");
+            }
+        }, 500);
+    })
+})
+</script>
+

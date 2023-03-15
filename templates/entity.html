@@ -1,0 +1,90 @@
+{% set navbar = true%}
+{% include "header.html" %}
+            
+    <div class="previewContainer">
+        
+        {% if entity %}
+        {% for entity in entity %}
+        <img src="/{{entity.thumbnail}}" class="previewImage" hidden>
+        <video autoplay muted class="previewVideo" onended="previewEnded()">
+            <source src="/{{entity.preview}}" type="video/mp4">
+        </video>
+        <div class='previewOverlay'>
+            <div class="mainDetails">
+                <h3>{{entity.name}}</h3>
+                <div class="buttons">
+                    <button onclick='watchVideo("{{videoid}}")'><i class='fas fa-play'></i> {{inprogress}}</button>
+                    <button onclick='volumeToggle(this)'><i class='fas fa-volume-mute'></i></button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+
+    </div>
+        {% if seasons %}
+        {% for season in seasons %}
+        <div class="season">
+             <h3>Season {{season}}</h3>
+            <div class="videos">
+                {% if episodes %}
+                {% for episode in episodes %}
+                {% for entity in entity %}
+                
+                {% if episode.season == season%}
+                {% if episode.entityid == entity.id%}
+                    <a href="/watch/{{episode.id}}">
+                        <div class="episodeContainer">
+                            <div class="contents">
+                                <img src="/{{entity.thumbnail}}">
+                                <div class="videoInfo">
+                                    <h4>{{episode.episode}}. {{episode.title}}</h4>
+                                    <span>{{episode.description}}</span> 
+                                </div>
+                                {% for seen in hasseen %}
+                                {% if seen.videoid == episode.id %}
+                                <i class='fas fa-check-circle seen'>  izlendi</i>
+                                {% endif %}
+                                {% endfor %} 
+                            </div>
+                        </div>
+                    </a>
+                {% endif %}
+                {% endif %}
+                    
+                {% endfor %}
+                {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+
+    <div class="previewCategories noScroll">
+        <div class="category">
+            {% if might_like %}
+            {% for category in categories %}
+            {% for entity in entity %}
+                {% if category.id == entity.categoryid %}
+                <h3>You might also like</h3>
+                <h3>{{category.name}}</h3>
+                {% endif %}
+            {% endfor %}
+            {% endfor %}
+            <div class="entities">
+                {% for category in might_like %}
+                {% for entity in entity %}
+                {% if category.categoryid == entity.categoryid %}
+                <a href="/watch/{{category.id}}">
+                    <div class="previewContainer small">
+                        <img src="/{{category.thumbnail}}" title="{{category.name}}">
+                    </div>
+                </a>
+                {% endif %}
+                {% endfor %}
+                {% endfor %}
+            {% endif %}
+            </div>
+        </div>
+    </div>
+

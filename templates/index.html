@@ -1,0 +1,43 @@
+{% set navbar = true%}
+{% include "header.html" %}
+
+<div class="previewContainer">
+    {% for entity in entity %}
+    <img src="/{{entity.thumbnail}}" class="previewImage" hidden>
+        <video autoplay muted class="previewVideo" onended="previewEnded()">
+            <source src="/{{entity.preview}}" type="video/mp4">
+        </video>
+        <div class='previewOverlay'>
+            <div class="mainDetails">
+                <h3>{{entity.name}}</h3>
+                
+                <div class="buttons">
+                    <button onclick='entityVideo("{{entity.id}}")'><i class='fas fa-play'></i> Play</button>
+                    <button onclick='volumeToggle(this)'><i class='fas fa-volume-mute'></i></button>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+<div class="previewCategories">
+    {% for category in category %}
+    <div class="category">
+        <h3>{{category.name}}</h3>
+        <div class="entities">
+            {% for subentity in entities %}
+            {% for entity in subentity %}
+            {% if entity.categoryid == category.id%}
+            <a href="entity/{{entity.id}}">
+                <div class="previewContainer small">
+                    <img src="/{{entity.thumbnail}}" title="{{entity.name}}">
+                </div>
+            </a>
+            {% endif %}
+            {% endfor %} 
+            {% endfor %}
+        </div>
+    </div>   
+    {% endfor %} 
+</div>
+ 

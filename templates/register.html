@@ -1,0 +1,76 @@
+{% set navbar = false%}
+{% include "header.html" %}
+
+<div class="reglog">
+    <a class="logo" href="/" target="_blank"><img src="/assets/images/logo.png"/></a>
+    <div class="reglogContainer ">
+        <div class="column">
+
+        <h1 class="form__title">Sign Up</h3>
+        <form action="/register" method="POST">  
+            {% if fname_lenght %}
+            <span>{{fname_lenght}}</span>
+            {% endif %}
+            {% if fname_special %}
+            <span>{{fname_special}}</span>
+            {% endif %}    
+            <div class="login__group">
+                <input class="login__group__input" name="fname" type="text" placeholder="First name" required="First Name"/>
+            </div>
+            {% if lname_lenght %}
+            <span>{{lname_lenght}}</span>
+            {% endif %}
+            {% if lname_special %}
+            <span>{{lname_special}}</span>
+            {% endif %}
+            <div class="login__group">
+                <input class="login__group__input" name="lname" type="text" placeholder="Last name" required="Last name"/>
+            </div>
+            {% if uname_lenght %}
+            <span>{{uname_lenght}}</span>
+            {% endif %}
+            {% if uname_special %}
+            <span>{{uname_special}}</span>
+            {% endif %}
+            {% if uname_used %}
+            <span>{{uname_used}}</span>
+            {% endif %}
+            <div class="login__group">
+                <input class="login__group__input" name="uname" type="text" placeholder="Username" required="Username"/>
+            </div>
+            {% if email_invalid %}
+            <span>{{email_invalid}}</span>
+            {% endif %}
+            {% if email_used %}
+            <span>{{email_used}}</span>
+            {% endif %}
+            <div class="login__group">
+                <input class="login__group__input" name="email" type="email" placeholder="Email" required="Email"/>
+            </div>
+            {% if email_notmatch %}
+            <span>{{email_notmatch}}</span>
+            {% endif %}
+            <div class="login__group">
+                <input class="login__group__input" name="email2" type="email" placeholder="Confirm email" required="Confirm email"/>
+            </div>
+            {% if pass_lenght %}
+            <span>{{pass_lenght}}</span>
+            {% endif %}
+            <div class="login__group">
+                <input class="login__group__input" name="pass" type="password" placeholder="Password" required="Password"/>
+            </div>
+            {% if pass_notmatch %}
+            <span>{{pass_notmatch}}</span>
+            {% endif %}
+            <div class="login__group">
+                <input class="login__group__input" name="pass2" type="password" placeholder="Confirm password" required="Confirm password"/>
+            </div>
+            
+            <button class="login__sign-in" type="submit">Sign Up</button>
+            
+        </form>
+        <a href="/login" class="signInMessage">Already have an account? Sign in here!</a>
+        </div>
+    </div>       
+</div>    
+     

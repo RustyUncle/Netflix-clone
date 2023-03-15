@@ -1,0 +1,29 @@
+{% set navbar = false%}
+{% include "header.html" %}
+<div class="reglog">
+    <a class="logo" href="/" target="_blank"><img src="/assets/images/logo.png"/></a>
+    <div class="reglogContainer small">
+        <div class="column">    
+            <h1 class="form__title">Sign In</h3>
+            <form action="/login" method="POST">  
+                {% if email_invalid %}
+                <span>{{email_invalid}}</span>
+                {% endif %}
+                <div class="login__group">
+                    <input class="login__group__input" name="email" type="email" placeholder="Email" required="Email"/>
+                </div>
+                {% if empw_notmatch %}
+                <span>{{empw_notmatch}}</span>
+                {% endif %}
+                <div class="login__group">
+                    <input class="login__group__input" name="pass" type="password" placeholder="Password" required="Password"/>
+                </div>
+                
+                <button class="login__sign-in" type="submit">Sign In</button>
+                
+            </form>
+            <a href="/register" class="signInMessage">Need an account? Sign up here!</a>
+        </div>
+    </div>  
+</div>      
+     

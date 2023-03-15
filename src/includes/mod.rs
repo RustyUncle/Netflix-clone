@@ -1,0 +1,15 @@
+pub mod register_service;
+mod register_validator;
+pub mod login_service;
+mod login_validator;
+mod models;
+mod constants;
+pub mod index_service;
+pub mod entity_service;
+pub mod watch_service;
+pub mod ajax_services;
+pub mod category_service;
+pub mod movies_service;
+pub mod shows_service;
+pub mod profile_services;
+mod profile_validator;

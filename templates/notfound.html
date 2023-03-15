@@ -1,0 +1,16 @@
+{% set navbar = false%}
+{% include "header.html" %}
+
+<div class="wrapper">
+    <div class="previewContainer">
+        {% if bad_request %}
+        <div class='previewOverlay'>
+            <div class="mainDetails">
+                <span class="errorBanner">{{bad_request}}</span>
+            </div>    
+        </div>
+        {% endif %}
+    </div>
+</div> 
+
+   
