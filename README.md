@@ -16,7 +16,7 @@ Import rustflix_db.sql to Postgres</br>
 There are a few predefined preview movie and thumbnail names inside rustflix_db.sql</br>
 so use them as adding movie files to entities/previews/ - for example: "entities/previews/extraction.mp4"</br>
 
-<h4>Predifined movie list:</h4></br> 
+<h4>Predefined movie list:</h4></br> 
 <li>extraction.mp4</li>
 <li>6_underground.mp4</li>
 <li>against_the_ice.mp4</li>
